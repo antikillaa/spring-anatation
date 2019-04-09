@@ -6,12 +6,13 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class TennisCoach implements Coach {
+    @Autowired
     private FortuneService fortuneService;
 
-    @Autowired
+/*    @Autowired
     public TennisCoach(FortuneService fortuneService) {
         this.fortuneService = fortuneService;
-    }
+    }*/
 
     public TennisCoach() {
         System.out.println(">>> TennisCoach: inside default constructor");
@@ -25,7 +26,7 @@ public class TennisCoach implements Coach {
         return fortuneService.getFortune();
     }
 
-    @Autowired
+/*    @Autowired
     public void setFortuneService(FortuneService fortuneService) {
         System.out.println(">>> TennisCoach: inside setFortuneService method");
 
@@ -36,5 +37,5 @@ public class TennisCoach implements Coach {
     public void doSomeCreazyThing(FortuneService fortuneService) {
         System.out.println(">>> TennisCoach: inside doSomeCreazyThing method");
         this.fortuneService = fortuneService;
-    }
+    }*/
 }
