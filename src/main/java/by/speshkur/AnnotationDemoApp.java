@@ -1,7 +1,6 @@
 package by.speshkur;
 
 import by.speshkur.coach.Coach;
-import by.speshkur.fortune.HappyFortuneService;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class AnnotationDemoApp {
@@ -14,6 +13,8 @@ public class AnnotationDemoApp {
 
         System.out.println(tennisCoach.getDailyWorkout());
         System.out.println(tennisCoach.getDailyFortune());
+
+
 
         context.close();
     }
