@@ -43,4 +43,5 @@ public class TennisCoach implements Coach {
         System.out.println(">>> TennisCoach: inside doSomeCreazyThing method");
         this.fortuneService = fortuneService;
     }*/
+
 }

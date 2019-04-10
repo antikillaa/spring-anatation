@@ -4,6 +4,7 @@ import by.speshkur.fortune.FortuneService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -20,7 +21,8 @@ public class FileFortuneService implements FortuneService {
     private List<String> theFortunes = new ArrayList<>();
     private Random myRandom = new Random();
 
-    public String getFortune() {
+    @PostConstruct
+    private void loadFortunes() {
         File theFile = new File(fileName);
 
         System.out.println("Reading fortunes from file: " + theFile);
@@ -34,7 +36,9 @@ public class FileFortuneService implements FortuneService {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
 
+    public String getFortune() {
         int index = myRandom.nextInt(theFortunes.size());
 
         return theFortunes.get(index);
