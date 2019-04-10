@@ -14,7 +14,7 @@ public class SwimCoach implements Coach {
     @Value("${foo.team}")
     private String team;
 
-    public SwimCoach(@Qualifier("randomFortuneService") FortuneService fortuneService) {
+    public SwimCoach(@Qualifier("fileFortuneService") FortuneService fortuneService) {
         this.fortuneService = fortuneService;
     }
 
