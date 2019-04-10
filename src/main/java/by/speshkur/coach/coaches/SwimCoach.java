@@ -1,5 +1,6 @@
-package by.speshkur.coach;
+package by.speshkur.coach.coaches;
 
+import by.speshkur.coach.Coach;
 import by.speshkur.fortune.FortuneService;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
