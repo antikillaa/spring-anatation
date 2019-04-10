@@ -26,8 +26,7 @@ public class FileFortuneService implements FortuneService {
         System.out.println("Reading fortunes from file: " + theFile);
         System.out.println("File exists: " + theFile.exists());
 
-        try (BufferedReader reader = new BufferedReader(
-                new FileReader(theFile))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(theFile))) {
             String tempLine;
             while ((tempLine = reader.readLine()) != null) {
                 theFortunes.add(tempLine);
