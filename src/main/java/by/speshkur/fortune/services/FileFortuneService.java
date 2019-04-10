@@ -1,7 +1,6 @@
 package by.speshkur.fortune.services;
 
 import by.speshkur.fortune.FortuneService;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
@@ -16,8 +15,8 @@ import java.util.Random;
 @Component
 public class FileFortuneService implements FortuneService {
 
-    @Value("${fileFortune.filename}")
-    private String fileName;
+    //    @Value("${fileFortune.filename}")
+    private String fileName = "/Users/stasnislav.peshkur/IdeaProjects/luv2code/spring-anatation/src/main/resources/fortune-data.txt";
     private List<String> theFortunes = new ArrayList<>();
     private Random myRandom = new Random();
 
