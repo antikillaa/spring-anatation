@@ -2,10 +2,22 @@ package by.speshkur.fortune;
 
 import org.springframework.stereotype.Component;
 
+import java.util.Random;
+
 @Component
 public class RandomFortuneService implements FortuneService {
 
     public String getFortune() {
-        return null;
+        String[] fortunesList =
+                {
+                        "You are lucky",
+                        "Your are unlucky",
+                        "Hello world"
+                };
+
+        Random random = new Random();
+        int i = random.nextInt(fortunesList.length);
+
+        return fortunesList[i];
     }
 }
