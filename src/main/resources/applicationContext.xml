@@ -12,4 +12,5 @@
     <!-- define the dependency -->
 	
 	<context:component-scan base-package="by.speshkur"/>
+    <context:property-placeholder location="classpath:sport.properties"/>
 </beans>

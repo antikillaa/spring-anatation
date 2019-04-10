@@ -1,5 +1,6 @@
-package by.speshkur.fortune;
+package by.speshkur.fortune.services;
 
+import by.speshkur.fortune.FortuneService;
 import org.springframework.stereotype.Component;
 
 import java.util.Random;
